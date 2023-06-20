@@ -12,5 +12,8 @@ void print_alphabet_x10(void);
 int _putchar(char c);
 int _islower(int c);
 
+int _putchar(char c);
+int _isalpha(int c);
+
 /* Add more function prototypes as needed */
 #endif /* MAIN_H */
