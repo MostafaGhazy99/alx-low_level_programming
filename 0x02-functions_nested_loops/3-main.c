@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - check the code.
  *
@@ -18,4 +17,3 @@ int main(void)
     _putchar('\n');
     return (0);
 }
-
