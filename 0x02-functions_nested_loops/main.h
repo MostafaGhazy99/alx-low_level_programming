@@ -20,5 +20,20 @@ int print_sign(int n);
 
 int _putchar(char c);
 int _abs(int n);
+
+int _putchar(char c);
+int print_last_digit(int n);
+
+int _putchar(char c);
+void jack_bauer(void);
+
+int _putchar(char c);
+void times_table(void);
+
+int _putchar(char c);
+int add(int a, int b);
+
+int _putchar(char c);
+void print_to_98(int n);
 /* Add more function prototypes as needed */
 #endif /* MAIN_H */
