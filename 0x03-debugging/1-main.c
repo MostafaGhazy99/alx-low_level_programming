@@ -1,24 +1,15 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - causes an infinite loop
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
+	int n;
 
-    printf("Infinite loop incoming :(\n");
-
-    i = 0;
-
-    /* Commented out the part causing the infinite loop
-    while (i < 10)
-    {
-        putchar(i);
-    }
-    */
-
-    printf("Infinite loop avoided! \\o/\n");
-    return (0);
+	n = 0;
+	positive_or_negative(n);
+	return (0);
 }
