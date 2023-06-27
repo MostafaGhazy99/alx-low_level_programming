@@ -18,6 +18,7 @@ void print_array(int *a, int n);
 void print_rev(char *s);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
+char *_strcpy(char *dest, char *src);
 
 
 #endif /* MAIN_H */
