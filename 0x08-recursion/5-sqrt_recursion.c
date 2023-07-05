@@ -1,32 +1,31 @@
 #include "main.h"
 
 /**
- * sqrt_recursive - Recursive helper function to compute square root.
- * @n: The number to compute the square root of.
- * @guess: The current guess for the square root.
+ * sqrt_check - Checks for the square root of n
+ * @n: The number to find the square root for
+ * @guess: The current guess for the square root
  *
- * Return: The natural square root of the number.
- * If the number does not have a natural square root, returns -1.
+ * Return: The square root if found, -1 otherwise
  */
-int sqrt_recursive(int n, int guess)
+int sqrt_check(int n, int guess)
 {
-if (guess * guess == n) /* Base case: square root found */
+if (guess * guess == n)
 return (guess);
-if (guess * guess > n) /* Base case: square root does not exist */
+else if (guess * guess > n)
 return (-1);
-return (sqrt_recursive(n, guess + 1)); /* Recursive call  incremented guess */
+else
+return (sqrt_check(n, guess + 1));
 }
 
 /**
- * _sqrt_recursion - Computes the natural square root of a number.
- * @n: The number to compute the square root of.
+ * _sqrt_recursion - Returns the natural square root of a number
+ * @n: The number to find the square root for
  *
- * Return: The natural square root of the number.
-   If the number does not have a natural square root, returns -1.
+ * Return: The square root if found, -1 otherwise
  */
 int _sqrt_recursion(int n)
 {
-if (n < 0) /* Check for negative number */
+if (n < 0)
 return (-1);
-return (sqrt_recursive(n, 0)); /* Start recursion with initial guess 0 */
+return (sqrt_check(n, 0));
 }
