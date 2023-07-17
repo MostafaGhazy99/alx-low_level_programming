@@ -1,7 +1,6 @@
 #include "dog.h"
-#include <stddef.h> 
+#include <stddef.h>
 
-/* Add this line for NULL declaration */
 /**
  * init_dog - Initializes a struct dog
  * @d: Pointer to the struct dog to initialize
