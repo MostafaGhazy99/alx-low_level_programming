@@ -1,24 +1,23 @@
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
 /**
- * str_len - Computes the length of a string
- * @str: The input string
- *
+ * str_len - Calculates the length of a string
+ * @str: The string
  * Return: The length of the string
  */
 int str_len(char *str)
 {
-int length = 0;
-while (str[length] != '\0')
-length++;
-return length;
+int len = 0;
+while (str[len] != '\0')
+len++;
+return len;
 }
+
 /**
- * str_copy - Copies a string
- * @dest: The destination string
+ * str_copy - Copies a string to a newly allocated memory
+ * @dest: The destination buffer
  * @src: The source string
  */
 void str_copy(char *dest, char *src)
@@ -34,38 +33,35 @@ dest[i] = '\0';
 
 /**
  * new_dog - Creates a new dog
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
- *
- * Return: Pointer to the newly created dog, NULL if failed
+ * @name: The name of the dog
+ * @age: The age of the dog
+ * @owner: The owner of the dog
+ * Return: Pointer to the new dog, or NULL if it fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-/* Validate input parameters */
-if (name == NULL || owner == NULL)
-return (NULL);
-/* Allocate memory for the dog structure */
-dog_t *new_dog = malloc(sizeof(dog_t));
+dog_t *new_dog;
+int name_len, owner_len;
+new_dog = malloc(sizeof(dog_t));
 if (new_dog == NULL)
-return (NULL);
-/* Copy the name and owner strings */
-new_dog->name = malloc(sizeof(char) * (str_len(name) + 1));
+return NULL;
+name_len = str_len(name);
+owner_len = str_len(owner);
+new_dog->name = malloc(sizeof(char) * (name_len + 1));
 if (new_dog->name == NULL)
 {
 free(new_dog);
-return (NULL);
+return NULL;
 }
-str_copy(new_dog->name, name);
-new_dog->owner = malloc(sizeof(char) * (str_len(owner) + 1));
+new_dog->owner = malloc(sizeof(char) * (owner_len + 1));
 if (new_dog->owner == NULL)
 {
 free(new_dog->name);
 free(new_dog);
-return (NULL);
+return NULL;
 }
+str_copy(new_dog->name, name);
 str_copy(new_dog->owner, owner);
-/* Set the age of the dog */
 new_dog->age = age;
-return (new_dog);
+return new_dog;
 }
