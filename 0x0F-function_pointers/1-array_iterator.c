@@ -8,12 +8,13 @@
  *
  * Return: Nothing.
  */
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-size_t i; // Move the variable declaration here
+size_t i; /* Move the variable declaration here */
 if (array && action)
 {
-for (i = 0; i < size; i++) // Use the variable 'i' in the initialization
+for (i = 0; i < size; i++) /* Use the variable 'i' in the initialization */
 {
 action(array[i]);
 }
