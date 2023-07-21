@@ -11,8 +11,4 @@ if (name && f)
 {
 f(name);
 }
-else
-{
-printf("Error: Invalid input!\n");
-}
 }
