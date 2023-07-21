@@ -11,6 +11,11 @@ void array_iterator(int *array, size_t size, void (*action)(int));
 int int_index(int *array, int size, int (*cmp)(int));
 
 /* Struct op */
+/**
+ * struct op - Struct that represents an operation.
+ * @op: The operator symbol (e.g., "+", "-", "*", "/", "%").
+ * @f: A pointer to the corresponding function for the operation.
+ */
 typedef struct op
 {
 char *op;
