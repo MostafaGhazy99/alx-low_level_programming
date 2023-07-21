@@ -13,8 +13,8 @@ int int_index(int *array, int size, int (*cmp)(int));
 /* Struct op */
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+char *op;
+int (*f)(int a, int b);
 } op_t;
 
 /* Function prototypes for calculator program */

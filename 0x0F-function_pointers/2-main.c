@@ -1,13 +1,3 @@
-#include <stddef.h>
-
-/**
- * array_iterator - Executes a function on each element of an array
- * @array: Pointer to the array
- * @size: Size of the array
- * @action: Pointer to the function to execute on each element
- *
- * Return: Nothing.
- */
 #include <stdio.h>
 #include "function_pointers.h"
 
@@ -21,7 +11,6 @@ int is_98(int elem)
 {
 return (98 == elem);
 }
-
 /**
  * is_strictly_positive - check if a number is greater than 0
  * @elem: the integer to check
@@ -32,7 +21,6 @@ int is_strictly_positive(int elem)
 {
 return (elem > 0);
 }
-
 /**
  * abs_is_98 - check if the absolute value of a number is 98
  * @elem: the integer to check
@@ -43,7 +31,6 @@ int abs_is_98(int elem)
 {
 return (elem == 98 || -elem == 98);
 }
-
 /**
  * main - check the code
  *

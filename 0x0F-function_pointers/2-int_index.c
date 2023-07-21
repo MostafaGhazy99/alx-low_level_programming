@@ -11,17 +11,16 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-    int i; /* Move the variable declaration here */
-    if (array && cmp && size > 0)
-    {
-        for (i = 0; i < size; i++) /* Use the variable 'i' in the initialization */
-        {
-            if (cmp(array[i]))
-            {
-                return i;
-            }
-        }
-    }
-    return -1;
+int i; /* Move the variable declaration here */
+if (array && cmp && size > 0)
+{
+for (i = 0; i < size; i++) /* Use the variable 'i' in the initialization */
+{
+if (cmp(array[i]))
+{
+return (i);
 }
-
+}
+}
+return (-1);
+}
