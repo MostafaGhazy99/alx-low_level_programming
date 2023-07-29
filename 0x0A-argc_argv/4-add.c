@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
  * main - Entry point
@@ -10,23 +9,6 @@
  *
  * Return: 0 if successful, 1 if error
  */
-
-int is_positive_number(const char *str) 
-{
-if (str == NULL || *str == '\0') 
-{
-return (0);
-}
-for (int i = 0; str[i] != '\0'; i++) 
-{
-if (!isdigit(str[i]) && str[i] != '-') 
-{
-return (0);
-}
-}
-return (1);
-}
-
 int main(int argc, char *argv[])
 {
 int i, num, sum = 0;
